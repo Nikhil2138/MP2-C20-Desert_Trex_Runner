@@ -88,7 +88,9 @@ function draw() {
   textSize(20);
   fill("black")
   text("Score: "+ score,30,50);
-  
+
+  restart.depth = restart.depth + 1;
+  gameOver.depth = gameOver.depth + 1;
   
   if (gameState===PLAY){
     score = score + Math.round(getFrameRate()/60);
