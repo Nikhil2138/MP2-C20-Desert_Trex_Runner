@@ -79,7 +79,6 @@ function setup() {
   cloudsGroup = new Group();
   obstaclesGroup = new Group();
    
-  ground.debug= true;
   score = 0;
 }
 
