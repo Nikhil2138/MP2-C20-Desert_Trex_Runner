@@ -1,5 +1,6 @@
 # Desert Trex Runner
 # This game is an upgraded version of my previous Trex Runner game and it is created using P5 library of javaScript.
+# This game can be played on any device.
 #
 # Tutorial for PC/Laptop:
 # Press " Spacebar / |________________| " to jump.
