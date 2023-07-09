@@ -88,13 +88,13 @@ function draw() {
   textSize(20);
   fill("black")
   text("Score: "+ score,30,50);
-
+ 
   restart.depth = restart.depth + 1;
   gameOver.depth = gameOver.depth + 1;
   
   if (gameState===PLAY){
     score = score + Math.round(getFrameRate()/60);
-    ground.velocityX = -(6 + 3*score/100);
+    ground.velocityX = -(6 + 4*score/100);
     
     if((touches.length > 0 || keyDown("SPACE")) && trex.y  >= height-110) {
       jumpSound.play( )
@@ -151,7 +151,7 @@ function spawnClouds() {
     cloud.y = Math.round(random(100,220));
     cloud.addImage(cloudImage);
     cloud.scale = 0.5;
-    cloud.velocityX = -3;
+    cloud.velocityX = -(6 + 4*score/100);
     
      //assign lifetime to the variable
     cloud.lifetime = 300;
@@ -172,7 +172,7 @@ function spawnObstacles() {
     obstacle.setCollider('circle',0,0,45)
     // obstacle.debug = true
   
-    obstacle.velocityX = -(6 + 3*score/100);
+    obstacle.velocityX = -(6 + 4*score/100);
     
     //generate random obstacles
     var rand = Math.round(random(1,2));
