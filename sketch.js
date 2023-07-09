@@ -91,6 +91,7 @@ function draw() {
  
   restart.depth = restart.depth + 1;
   gameOver.depth = gameOver.depth + 1;
+  trex.depth = trex.depth + 1;
   
   if (gameState===PLAY){
     score = score + Math.round(getFrameRate()/60);
@@ -155,10 +156,6 @@ function spawnClouds() {
     
      //assign lifetime to the variable
     cloud.lifetime = 300;
-    
-    //adjust the depth
-    cloud.depth = trex.depth;
-    trex.depth = trex.depth+1;
     
     //add each cloud to the group
     cloudsGroup.add(cloud);
